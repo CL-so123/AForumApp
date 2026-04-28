@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import PostBox from '../components/PostBox'
+import { supabase } from '../Client'
+import { useState, useEffect } from 'react'
 
 const ReadPost = () => {
     const [posts, setPosts] = useState([])
@@ -25,7 +28,7 @@ const ReadPost = () => {
                     [...posts]
                         .sort((a, b) => a.id - b.id)
                         .map((post, index) =>
-                            <Card
+                            <PostBox
                                 key={post.id}
                                 id={post.id}
                                 name={post.name}

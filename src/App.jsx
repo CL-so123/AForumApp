@@ -3,11 +3,13 @@ import {useRoutes, Link} from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import CreatePost from './pages/CreatePost'
+import ReadPost from './pages/ReadPost'
 
 function App() {
   const routes = useRoutes([
     {path: '/', element: <Home />},
-    {path: '/createpost', element: <CreatePost />}
+    {path: '/createpost', element: <CreatePost />},
+    {path: '/', element: <ReadPost />}
   ])
   
   
