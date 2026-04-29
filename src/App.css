@@ -195,3 +195,12 @@
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+.ReadPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: black;
+  
+}
