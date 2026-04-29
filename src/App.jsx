@@ -20,7 +20,7 @@ function App() {
     <div className = "app">
       <nav className = "nav">
         <Link to="/">Home</Link>
-        <Link to="/createPost">Create New Post</Link>
+        <Link to="/createPost" className = "create-link">Create New Post</Link>
       </nav>
       {routes}
     </div>
