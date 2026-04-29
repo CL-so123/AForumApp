@@ -1,13 +1,25 @@
 import { Link } from 'react-router-dom'
-const PostBox = (props) => {
+import { formatDistanceToNow } from 'date-fns'
+
+const PostBox = ({ id, title, created_at }) => {
     return (
         <div className="Box">
-            
-                <h2 className="title">Title: {props.title}</h2>
-                <h3 className="author">Content: {props.content}</h3>
-                <p className="description">Image (Optional): {props.image}</p>
-            
+
+
+            {created_at && (
+                <p className="date">
+                    Posted {formatDistanceToNow(new Date(created_at), {
+                        addSuffix: true
+                    })}
+                </p>
+            )}
+            <h2>
+                <Link to={`/post/${id}`}>
+                    {title}
+                </Link>
+            </h2>
         </div>
     )
 }
+
 export default PostBox

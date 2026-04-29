@@ -1,46 +1,45 @@
-import { Link } from 'react-router-dom'
-import PostBox from '../components/PostBox'
 import { supabase } from '../Client'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import PostBox from '../components/PostBox'
 
 const ReadPost = () => {
     const [posts, setPosts] = useState([])
-    const [order, setOrder] = useState([])
 
     useEffect(() => {
-        const fetchPost = async () => {
-            const { data } = await supabase
+        const fetchPosts = async () => {
+            const { data, error } = await supabase
                 .from('Posts')
-                .select()
-                .order('created_at', { ascending: true })
+                .select('id, title, created_at')
+                .order('created_at', { ascending: false })
+
+            if (error) {
+                console.error(error)
+                return
+            }
+
             setPosts(data)
         }
-        fetchPost()
+
+        fetchPosts()
     }, [])
 
-
-     return (
+    return (
         <div className="ReadPosts">
-           
-            {
-                
-                posts && posts.length > 0 ?
-                    [...posts]
-                        .sort((a, b) => a.id - b.id)
-                        .map((post, index) =>
-                            <PostBox
-                                key={post.id}
-                                id={post.id}
-                                name={post.name}
-                                speed={post.speed}
-                                color={post.color}
-                            />
-                        ) : <h2>{'No Challenges Yet '}</h2>
-            }
+            {posts.length > 0 ? (
+                posts.map(post => (
+                    <PostBox
+                        key={post.id}
+                        id={post.id}
+                        title={post.title}
+                        created_at={post.created_at}
+                    />
+                    
+        ))
+            ) : (
+                <h2>No posts yet</h2>
+            )}
         </div>
     )
 }
 
 export default ReadPost
-
-

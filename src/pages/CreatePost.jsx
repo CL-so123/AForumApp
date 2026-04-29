@@ -6,11 +6,11 @@ const CreatePost = () =>{
     
     const [post, setPost] = useState({title: "", content:"", image: ""})
      const handleChange = (event) => {
-        const { title, value } = event.target
+        const { name, value } = event.target
         setPost((prev) => {
             return {
                 ...prev,
-                [title]: value,
+                [name]: value,
             }
         })
     }
@@ -26,15 +26,17 @@ const CreatePost = () =>{
     }
     return(
         <div>
-            <form>
+             <form onSubmit={createPost}>
                 <label htmlFor= "title"> title</label><br />
                 <input type= "text" id = "title" name = "title" onChange={handleChange} /> <br />
                 <br />
                 <label htmlFor = "content"> content </label><br />
-                <input type = "content" id = "content" name = "content" onChange={handleChange} /> <br />
+                <input type = "text" id = "content" name = "content" onChange={handleChange} /> <br />
                 <br />
                 <label htmlFor = "image"> image</label><br />
-                <input type = "image" id = "image" name = "image" onChange={handleChange} /> <br />
+                <input type = "text" id = "image" name = "image" onChange={handleChange} /> <br />
+                 <br />
+                 <input type="submit" value="Submit" />
             </form>
         </div>
     )
