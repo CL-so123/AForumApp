@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items:flex-start;
+   position: relative;
 
 }
 .Box a{
@@ -22,4 +23,9 @@
 }
 .Box:hover {
   background-color: beige;
+}
+.post-actions {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }

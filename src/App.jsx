@@ -5,13 +5,15 @@ import Home from './pages/Home'
 import CreatePost from './pages/CreatePost'
 import ReadPost from './pages/ReadPost'
 import PostDetail from './pages/PostDetail'
+import EditPost from './pages/EditPost'
 
 function App() {
   const routes = useRoutes([
     {path: '/', element: <Home />},
     {path: '/createpost', element: <CreatePost />},
     {path: '/', element: <ReadPost />},
-    {path: '/post/:id', element: <PostDetail />}
+    {path: '/post/:id', element: <PostDetail />},
+    {path: '/post/:id', element: <EditPost/> }
   ])
   
   

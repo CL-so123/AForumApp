@@ -2,42 +2,49 @@ import { useParams } from 'react-router-dom'
 import { supabase } from '../Client'
 import { useEffect, useState } from 'react'
 import PostBox from '../components/PostBox'
+import EditPost from '../pages/EditPost'
 
 
 const PostDetail = () => {
-  const { id } = useParams()
-  const [post, setPost] = useState(null)
+    const { id } = useParams()
+    const [post, setPost] = useState(null)
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const { data, error } = await supabase
-        .from('Posts')
-        .select()
-        .eq('id', id)
-        .single()
+    useEffect(() => {
+        const fetchPost = async () => {
+            const { data, error } = await supabase
+                .from('Posts')
+                .select()
+                .eq('id', id)
+                .single()
 
-      if (error) {
-        console.error(error)
-        return
-      }
+            if (error) {
+                console.error(error)
+                return
+            }
 
-      setPost(data)
-    }
+            setPost(data)
+        }
 
-    fetchPost()
-  }, [id])
+        fetchPost()
+    }, [id])
 
-  if (!post) return <h2>Loading...</h2>
+    if (!post) return <h2>Loading...</h2>
 
-  return (
-    <PostBox
-      id={post.id}
-      created_at={post.created_at}
-      title={post.title}
-      content={post.content}
-      image={post.image}
-    />
-  )
+    return (
+        <div>
+            <PostBox
+                id={post.id}
+                title={post.title}
+                content={post.content}
+                image={post.image}
+                created_at={post.created_at}
+                full={true}
+
+            />
+            <EditPost />
+        </div>
+
+    )
 }
 
 export default PostDetail
