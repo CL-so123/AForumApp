@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom'
 const PostDetail = () => {
     const { id } = useParams()
     const [post, setPost] = useState(null)
+    const [comments, setComments] = useState([])
+    const [comment, setComment] = useState('')
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -41,6 +43,17 @@ const PostDetail = () => {
         window.location = '/'
     }
 
+
+    const handleCommentSubmit = async () => {
+        if (!comment.trim()) return
+
+        console.log('New comment:', comment)
+
+        // later: save to Supabase here
+
+        setComment('') // clear input after submit
+    }
+
     return (
         <div>
             <PostBox
@@ -52,16 +65,29 @@ const PostDetail = () => {
                 full={true}
 
             />
-            
-         <Link to={`/edit/${id}`} className = "edit-link">
-          <button className= "editbutton" >Edit</button>
-          </Link>
-          <button className="deleteButton" onClick={deletePost}>Delete</button>
+
+            <Link to={`/edit/${id}`} className="edit-link">
+                <button className="editbutton" >Edit</button>
+            </Link>
+            <button className="deleteButton" onClick={deletePost}>Delete</button>
+
+
+            <div className="comment-box">
+                <input
+                    type="text"
+                    placeholder="Write a comment..."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                />
+                <button onClick={handleCommentSubmit}>
+                    Submit
+                </button>
+            </div>
 
         </div>
 
     )
-    
+
 }
 
 export default PostDetail
