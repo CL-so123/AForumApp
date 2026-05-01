@@ -13,7 +13,7 @@ function App() {
     {path: '/createpost', element: <CreatePost />},
     {path: '/', element: <ReadPost />},
     {path: '/post/:id', element: <PostDetail />},
-    {path: '/post/:id', element: <EditPost/> }
+    {path: '/edit/:id', element: <EditPost/> }
   ])
   
   

@@ -22,7 +22,7 @@ const CreatePost = () =>{
             .insert({title: post.title, content: post.content, image: post.image})
             .select()
 
-        window.location = "/createPost"
+        window.location = "/"
     }
     return(
         <div>

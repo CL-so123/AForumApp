@@ -23,19 +23,13 @@ const EditPost = () => {
             .eq('id', id)
 
 
-        window.location = '/post/edit/:id';
+        window.location = '/';
     }
 
-    const deletePost = async (event) => {
-        event.preventDefault()
-        await supabase
-            .from('Posts')
-            .delete()
-            .eq('id', id)
-        window.location = '/post/:id'
+    
 
 
-    }
+    
     return (
         <div>
             <form>
@@ -48,8 +42,9 @@ const EditPost = () => {
                 <label htmlFor="image"> image</label><br />
                 <input type="text" id="image" name="image" onChange={handleChange} /> <br />
                 <br />
-                <button className = "editbutton"  onClick={editPost}> Edit</button>
-                <button className="deleteButton" onClick={deletePost}>Delete</button>
+                <input type="submit" value="Submit" onClick={editPost} />
+                
+                
             </form>
         </div>
     )

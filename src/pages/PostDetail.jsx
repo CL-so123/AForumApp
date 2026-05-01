@@ -3,6 +3,8 @@ import { supabase } from '../Client'
 import { useEffect, useState } from 'react'
 import PostBox from '../components/PostBox'
 import EditPost from '../pages/EditPost'
+import { Link } from 'react-router-dom'
+
 
 
 const PostDetail = () => {
@@ -30,6 +32,15 @@ const PostDetail = () => {
 
     if (!post) return <h2>Loading...</h2>
 
+    const deletePost = async (event) => {
+        event.preventDefault()
+        await supabase
+            .from('Posts')
+            .delete()
+            .eq('id', id)
+        window.location = '/'
+    }
+
     return (
         <div>
             <PostBox
@@ -41,10 +52,16 @@ const PostDetail = () => {
                 full={true}
 
             />
-            <EditPost />
+            
+         <Link to={`/edit/${id}`} className = "edit-link">
+          <button className= "editbutton" >Edit</button>
+          </Link>
+          <button className="deleteButton" onClick={deletePost}>Delete</button>
+
         </div>
 
     )
+    
 }
 
 export default PostDetail

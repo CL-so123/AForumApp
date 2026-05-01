@@ -29,11 +29,14 @@ const PostBox = ({ id, title, content, image, created_at, full = false }) => {
 
     // Only wrap in Link when it's NOT full view
     return full ? boxContent : (
-        <Link to={`/post/${id}`} className="box-link">
-            {boxContent}
-            
-        </Link>
-    )
+  <div>
+    <Link to={`/post/${id}`} className="box-link">
+      {boxContent}
+    </Link>
+
+   
+  </div>
+)
 }
 
 export default PostBox
