@@ -79,8 +79,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
+The biggest challenge thinking of a creative way to style up the app along with making they aren't overbearing.
 ## License
 
     Copyright [yyyy] [name of copyright owner]
