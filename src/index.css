@@ -109,3 +109,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+body{
+  background-image: url("https://i.ytimg.com/vi/gg8p_NDUKDk/maxresdefault.jpg");
+  background-size: cover;
+}
