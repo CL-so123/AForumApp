@@ -69,7 +69,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img width="400" height="203" alt="FinalProject_demo-ezgif com-speed" src="https://github.com/user-attachments/assets/eca539e4-a210-4021-985d-e87df10175cd" />
+<img width="1199" height="608" alt="FinalProject_vid3" src="https://github.com/user-attachments/assets/694aedc5-ed1d-460e-a528-45d2dae1651d" />
+
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
