@@ -34,22 +34,20 @@ const PostDetail = () => {
         fetchPost()
     }, [id])
 
+      const fetchComments = async () => {
+        const { data, error } = await supabase
+            .from('Comments')
+            .select('*')
+            .eq('post_id', id)
+            .order('created_at', { ascending: true })
+
+        if (error) return console.error(error)
+        setComments(data || [])
+    }
+
     // fetch comments
     useEffect(() => {
-        const fetchComments = async () => {
-            const { data, error } = await supabase
-                .from('Comments')
-                .select('*')
-                .eq('post_id', id)
-                .order('created_at', { ascending: true })
-
-            if (error) {
-                console.error(error)
-                return
-            }
-
-            setComments(data || [])
-        }
+        
         fetchComments()
     }, [id])
 
@@ -149,7 +147,7 @@ const PostDetail = () => {
 
                 {comments.map((c) => (
                     <div key={c.id} className="comment">
-                        - {c.comment}
+                        - {c.comment}   <br></br>
                     </div>
                 ))}
             </div>
