@@ -67,18 +67,15 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories (For codepath graders) :
 
 <img width="1199" height="608" alt="FinalProject_vid3" src="https://github.com/user-attachments/assets/694aedc5-ed1d-460e-a528-45d2dae1651d" />
 
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
+
 
 ## Notes
 
