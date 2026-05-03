@@ -317,3 +317,16 @@
     padding-left: 300px;
   }
 }
+.editbutton{
+   background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
+
+}
+.deleteButton{
+   background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
+}
+.upvoteButton{
+   background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
+}
+.submitButton{
+   background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
+}

@@ -13,7 +13,7 @@ function App() {
     {path: '/createpost', element: <CreatePost />},
     {path: '/', element: <ReadPost />},
     {path: '/post/:id', element: <PostDetail />},
-    {path: '/edit/:id', element: <EditPost/> }
+    {path: '/post/:id', element: <EditPost/> }
   ])
   
   
@@ -24,6 +24,8 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/createPost" className = "create-link">Create New Post</Link>
       </nav>
+      <h2>Cameron Parker</h2>
+      <h2>Z23775775</h2>
       {routes}
     </div>
     

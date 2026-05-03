@@ -124,7 +124,7 @@ const PostDetail = () => {
                 Delete
             </button>
 
-            <button onClick={handleUpvote}>
+            <button className = "upvoteButton" onClick={handleUpvote}>
                 👍 Upvote
             </button>
 
@@ -137,7 +137,7 @@ const PostDetail = () => {
                     onChange={(e) => setComment(e.target.value)}
                 />
 
-                <button onClick={handleCommentSubmit}>
+                <button className = "submitButton" onClick={handleCommentSubmit}>
                     Submit
                 </button>
             </div>
