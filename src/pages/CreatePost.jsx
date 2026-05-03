@@ -25,17 +25,17 @@ const CreatePost = () =>{
     }
     return(
         <div>
-             <form onSubmit={createPost}>
+             <form className = "post-form" onSubmit={createPost}>
                 <label htmlFor= "title"> title</label><br />
                 <input type= "text" id = "title" name = "title" onChange={handleChange} /> <br />
                 <br />
                 <label htmlFor = "content"> content </label><br />
                 <input type = "text" id = "content" name = "content" onChange={handleChange} /> <br />
                 <br />
-                <label htmlFor = "image"> image</label><br />
+                <label htmlFor = "image"> image (optional)</label><br />
                 <input type = "text" id = "image" name = "image" onChange={handleChange} /> <br />
                  <br />
-                 <input type="submit" value="Submit" />
+                 <input className = "creation-submit" type="submit" value="Submit" />
             </form>
         </div>
     )

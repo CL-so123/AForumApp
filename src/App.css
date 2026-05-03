@@ -231,7 +231,7 @@
 }
 
 .create-link:hover::after {
-  content: "📜✏️";
+  content: "✏️";
   position: absolute;
   right: -20px;
   animation: write 0.6s infinite;
@@ -330,3 +330,19 @@
 .submitButton{
    background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
 }
+.post-form{
+   font-size: 25px;
+  font-weight: 700px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 1px black;
+
+}
+.post-form input{
+  background-image: url("https://vignette.wikia.nocookie.net/elderscrolls/images/d/d7/Load_fighters_guild.png/revision/latest?cb=20160922181236");
+  font-size: 20px;
+}
+.sort-buttons button:hover{
+  cursor: pointer;
+  
+}
+
