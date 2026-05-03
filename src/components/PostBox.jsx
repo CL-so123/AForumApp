@@ -13,7 +13,7 @@ const PostBox = ({ id, title, content, image, created_at, upvotes, full = false 
                     })}
                 </p>
             )}
-            <h2>{title}</h2>
+            <h2 className = "title">{title}</h2>
             <p className="upvotes">
                 👍 {upvotes || 0} upvotes
             </p>
