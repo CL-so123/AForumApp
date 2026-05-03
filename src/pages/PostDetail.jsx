@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import { supabase } from '../Client'
 import { useEffect, useState } from 'react'
 import PostBox from '../components/PostBox'
-import EditPost from '../pages/EditPost'
 import { Link } from 'react-router-dom'
 
 

@@ -1,7 +1,5 @@
-import {Link} from 'react-router-dom'
 import ReadPost from './ReadPost'
-import PostBox from '../components/PostBox'
-import { formatDistanceToNow } from 'date-fns'
+
 
 const home = () => {
     return(

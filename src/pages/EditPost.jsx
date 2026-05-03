@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { supabase } from '../Client'
 import { useParams } from 'react-router-dom'
