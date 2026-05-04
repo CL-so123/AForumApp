@@ -69,7 +69,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories (For codepath graders) :
 
-<img width="1199" height="608" alt="FinalProject_vid3" src="https://github.com/user-attachments/assets/694aedc5-ed1d-460e-a528-45d2dae1651d" />
+<img width="1000" height="555" alt="FinalProject_vid7" src="https://github.com/user-attachments/assets/636e39e7-af11-4ca0-8eaf-7168ad885a70" />
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
