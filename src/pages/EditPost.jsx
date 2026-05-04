@@ -31,7 +31,7 @@ const EditPost = () => {
     
     return (
         <div>
-            <form>
+            <form className = "edit-form">
                 <label htmlFor="title"> title</label><br />
                 <input type="text" id="title" name="title" onChange={handleChange} /> <br />
                 <br />

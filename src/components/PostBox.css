@@ -55,6 +55,8 @@
     border-radius: 12px;
     border-width: 12px;
     border-color: yellow;
+     height: 200px;
+     width: 200;
 }
 .title{
     font-size: 50px;
