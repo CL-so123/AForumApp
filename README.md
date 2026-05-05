@@ -73,6 +73,14 @@ Here's a walkthrough of implemented user stories (For codepath graders) :
 
 
 
+
+(For Canvas):
+
+<img width="1910" height="964" alt="FinalProject_canvas2" src="https://github.com/user-attachments/assets/76a1dca4-698f-42e5-a46d-7518d9e4f997" />
+
+
+Netlify Deployment URL:  https://oblivionforumhub.netlify.app/
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
