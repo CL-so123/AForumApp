@@ -72,9 +72,11 @@ function App() {
             Create New Post
           </Link>
         )}
+        {session?.user && (
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
+        )}
 
         {<Link to="/login">Login</Link>}
         {<Link to="/signup">Signup</Link>}
