@@ -181,6 +181,7 @@ const PostDetail = () => {
                 image={post.image}
                 created_at={post.created_at}
                 upvotes={post.upvotes}
+                display_name={post.display_name}
                 full={true}
             />
 
