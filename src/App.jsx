@@ -58,6 +58,7 @@ function App() {
     await supabase.auth.signOut()
     setSession(null) // immediately update UI
   }
+  const displayName = session?.user?.user_metadata?.display_name
 
 
 
@@ -77,9 +78,15 @@ function App() {
           Logout
         </button>
         )}
+       
 
         {<Link to="/login">Login</Link>}
         {<Link to="/signup">Signup</Link>}
+         {session?.user && (
+        <span className="display-name">
+      Welcome, {displayName || "User"}
+      </span>
+        )}
       </nav>
       <h2 className="myName">Cameron Parker</h2>
       <h2 className="myName">Z23775775</h2>
