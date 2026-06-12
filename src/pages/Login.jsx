@@ -17,13 +17,19 @@ const Login = () => {
 
     if (error) {
       alert(error.message)
-    } else {
+      return
+    }
+
+    // 🔥 IMPORTANT: wait for Supabase session to exist
+    const { data: { session } } = await supabase.auth.getSession()
+
+    if (session) {
       navigate('/')
     }
   }
 
   return (
-    <form className = "login-text" onSubmit={handleLogin}>
+    <form className="login-text" onSubmit={handleLogin}>
       <h2>Login</h2>
       <input
         type="email"
@@ -31,7 +37,7 @@ const Login = () => {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <input 
+      <input
         type="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
