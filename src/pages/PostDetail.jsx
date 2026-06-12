@@ -16,6 +16,7 @@ const PostDetail = () => {
     const [summary, setSummary] = useState('')
     const [loadingSummary, setLoadingSummary] = useState(false)
     const [user, setUser] = useState(null)
+    const isOwner = user && post && user.id === post.user_id
 
     useEffect(() => {
         const getUser = async () => {

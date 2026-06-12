@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [displayName, setDisplayName] = useState('')
   const navigate = useNavigate()
 
   const handleSignup = async (e) => {
@@ -13,6 +14,11 @@ const Signup = () => {
     const { error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        data: {
+          display_name : displayName
+        }
+      }
     })
 
     if (error) {
@@ -26,6 +32,13 @@ const Signup = () => {
   return (
     <form className = "signup-text" onSubmit={handleSignup}>
       <h2>Sign Up</h2>
+
+      <input
+        type= "text"
+        placeholder= "Display Name"
+        onChange={(e) => setDisplayName(e.target.value)}
+        required
+        />
       <input
         type="email"
         placeholder="Email"

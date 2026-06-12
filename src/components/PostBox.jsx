@@ -3,12 +3,12 @@ import { formatDistanceToNow } from 'date-fns'
 import './PostBox.css'
 
 
-const PostBox = ({ id, title, content, image, created_at, upvotes, full = false }) => {
+const PostBox = ({ id, title, content, image, created_at, upvotes, display_name, full = false }) => {
     const boxContent = (
         <div className="Box">
             {created_at && (
                 <p className="date">
-                    Posted {formatDistanceToNow(new Date(created_at), {
+                    Posted by {display_name || "Unknown"}  {formatDistanceToNow(new Date(created_at), {
                         addSuffix: true
                     })}
                 </p>

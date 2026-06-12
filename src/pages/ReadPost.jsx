@@ -11,7 +11,7 @@ const ReadPost = () => {
         const fetchPosts = async () => {
             const { data, error } = await supabase
                 .from('Posts')
-                .select('id, title, content, created_at, upvotes')
+                .select('id, title, content, created_at, upvotes, display_name')
                 .order('created_at', { ascending: false })
 
             if (error) {
@@ -80,6 +80,7 @@ const ReadPost = () => {
                         title={post.title}
                         created_at={post.created_at}
                         upvotes={post.upvotes}
+                        display_name={post.display_name}
                     />
                 ))
             ) : (

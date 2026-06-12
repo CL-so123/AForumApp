@@ -40,7 +40,7 @@ const CreatePost = () => {
         const { data: { user } } = await supabase.auth.getUser()
         const { error } = await supabase
             .from('Posts')
-            .insert({ title: post.title, content: post.content, image: post.image, user_id: user.id })
+            .insert({ title: post.title, content: post.content, image: post.image, user_id: user.id, display_name: user.user_metadata.display_name})
             .select()
 
         if (error) {
